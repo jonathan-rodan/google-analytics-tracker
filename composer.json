@@ -1,0 +1,16 @@
+{
+    "name": "jonathan-rodan/google-analytics-tracker",
+    "description": "PHP Library for Google's Analytics Measurement Protocol",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Rodan",
+            "email": "jonathan@pixable.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"GoogleAnalyticsTracker\\": "src/"}
+    },
+    "require": {}
+}
