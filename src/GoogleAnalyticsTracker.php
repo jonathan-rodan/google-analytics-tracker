@@ -93,6 +93,30 @@ class GoogleAnalyticsTracker
     }
 
     /**
+     * @param string $uid
+     */
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
+    }
+
+    /**
+     * @param string $dataSource
+     */
+    public function setDataSource($dataSource)
+    {
+        $this->dataSource = $dataSource;
+    }
+
+    /**
+     * @param string $cid
+     */
+    public function setCid($cid)
+    {
+        $this->cid = $cid;
+    }
+
+    /**
      * @return string
      */
     public function getCid()
