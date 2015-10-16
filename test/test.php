@@ -34,20 +34,20 @@ $event = new Event("category", 'action', 'label', 1);
 $event->setCustomDimension(1, "dimension[1]");
 $event->setCustomMetric(1, 1);
 
-$fakeSender->setExpects("tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=event&ea=action&ec=category&el=label&ev=1&cd1=dimension%5B1%5D&cm1=1");
+$fakeSender->setExpects("v=1&tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=event&ea=action&ec=category&el=label&ev=1&cd1=dimension%5B1%5D&cm1=1");
 $googleAnalyticsTracker->send($event);
 
 //Event with least amount of thins possible
 
 $event = new Event("category", 'action');
-$fakeSender->setExpects("tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=event&ea=action&ec=category");
+$fakeSender->setExpects("v=1&tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=event&ea=action&ec=category");
 $googleAnalyticsTracker->send($event);
 
 //Page with multiple dimensions
 $page = new Page("domain","/path","title");
 $page->setCustomDimension(5,"DimensionFive");
 $page->setCustomDimension(9,"DimensionNine");
-$fakeSender->setExpects("tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=pageview&dh=domain&dp=%2Fpath&dt=title&cd5=DimensionFive&cd9=DimensionNine");
+$fakeSender->setExpects("v=1&tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=pageview&dh=domain&dp=%2Fpath&dt=title&cd5=DimensionFive&cd9=DimensionNine");
 $googleAnalyticsTracker->send($page);
 
 
@@ -55,5 +55,5 @@ $googleAnalyticsTracker->send($page);
 $page = new Page("domain","/path/longer");
 $page->setCustomMetric(2,4);
 $page->setCustomMetric(19,8);
-$fakeSender->setExpects("tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=pageview&dh=domain&dp=%2Fpath%2Flonger&cm2=4&cm19=8");
+$fakeSender->setExpects("v=1&tid=UA-12345-1&cid=1234-1234-1234-123455678&uid=uid&ds=dataSource&t=pageview&dh=domain&dp=%2Fpath%2Flonger&cm2=4&cm19=8");
 $googleAnalyticsTracker->send($page);

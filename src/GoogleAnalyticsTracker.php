@@ -87,7 +87,7 @@ class GoogleAnalyticsTracker
             $dataFromMe = $mapperForMe->map($this);
             $mapper = MapperFactory::getMapper($hit);
             $data = $mapper->map($hit);
-            $payload = http_build_query(array_merge($dataFromMe, $data));
+            $payload = http_build_query(array_merge(Array('v' => 1), $dataFromMe, $data));
             return $this->sender->send($payload);
         }
     }
