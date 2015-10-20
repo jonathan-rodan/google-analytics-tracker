@@ -37,7 +37,7 @@ $tracker->setUserAgent('yourcustomeventsenderbot/1.0 (+http://your.domanin.com/c
 
 You should have the Tracking Id from Google Analytics.
 
-You should specify a [formatted user agent string](https://en.wikipedia.org/wiki/User_agent#Format). If you don't specify any, a default `googleanalyticstrackerbot/1.0 (no.contact.info/available)` user agent will eb used.
+You should specify a [formatted user agent string](https://en.wikipedia.org/wiki/User_agent#Format). If you don't specify any, a default `googleanalyticstrackerbot/1.0 (no.contact.info/available)` user agent will be used.
 
 [Client Id](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid) and [User Id](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#uid) can be specified in the constructor and with the setters.
 
