@@ -6,14 +6,6 @@ PHP Library for the [`Analytics Measurement Protocol`](https://developers.google
 
 You can send `events` and `pages` with `custom dimensions` and `custom metrics` with a very simple interface.
 
-# To be implemented
-
-* E-Commerce Tracking
-* Social Interacions
-* Exception Tracking (in google analytics, the library logs an error with error_log when a request to google analytics fails).
-* User Timing
-* App / Screen Tracking (Which doesn't apply in PHP)
-
 # Installing
 
 Using Composer `jonathan-rodan/google-analytics-tracker`.
@@ -117,6 +109,14 @@ $page->setCustomDimension(9, "DimensionNine");
 
 $tracker->send($page) //true on success, false on failure.
 ```
+
+# To be implemented
+
+* E-Commerce Tracking
+* Social Interacions
+* Exception Tracking (in google analytics, the library logs an error with error_log when a request to google analytics fails).
+* User Timing
+* App / Screen Tracking (Which doesn't apply in PHP)
 
 # Requirements
 
