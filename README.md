@@ -26,7 +26,7 @@ Using Composer `jonathan-rodan/google-analytics-tracker`.
 
 ## Instantiating the tracker
 
-```
+```php
 require_once __DIR__ . "/../vendor/autoload.php";
 
 $tid = 'UA-0000000-00';
@@ -42,11 +42,11 @@ You should specify a [formatted user agent string](https://en.wikipedia.org/wiki
 [Client Id](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cid) and [User Id](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#uid) can be specified in the constructor and with the setters.
 
 Option 1
-```
+```php
 $tracker = new \GoogleAnalyticsTracker\GoogleAnalyticsTracker($tid, $clientId, $userId);
 ```
 option 2
-```
+```php
 $tracker = new \GoogleAnalyticsTracker\GoogleAnalyticsTracker($tid);
 $tracker->setClientId($clientId);
 $tracker->setUserId($userId);
@@ -59,7 +59,7 @@ This library has no persistence layer. That means that we don't keep track and m
 
 Simple Event with a label and a value of 10.
 
-```
+```php
 require_once __DIR__ . "/../vendor/autoload.php";
 
 $tid = 'UA-0000000-00';
@@ -76,7 +76,7 @@ $tracker->send($event) //true on success, false on failure.
 
 When sending the value, without a label, and with metrics:
 
-```
+```php
 require_once __DIR__ . "/../vendor/autoload.php";
 
 $tid = 'UA-0000000-00';
@@ -95,7 +95,7 @@ $tracker->send($event) //true on success, false on failure.
 
 ## Sending Pages
 
-```
+```php
 require_once __DIR__ . "/../vendor/autoload.php";
 
 $tid = 'UA-0000000-00';
