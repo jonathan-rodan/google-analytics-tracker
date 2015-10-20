@@ -25,7 +25,7 @@ class Sender
     private $protocol;
     private $userAgent;
 
-    CONST FAKE_USER_AGENT = 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14';
+    CONST FAKE_USER_AGENT = 'googleanalyticstrackerbot/1.0 (no.contact.info/available)';
 
     function __construct($domain = 'www.google-analytics.com', $path = 'collect', $port = 80, $protocol = 'http', $userAgent = null)
     {
