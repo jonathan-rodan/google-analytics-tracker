@@ -90,6 +90,11 @@ class GoogleAnalyticsTracker
             $payload = http_build_query(array_merge(Array('v' => 1), $dataFromMe, $data));
             return $this->sender->send($payload);
         }
+        return false;
+    }
+
+    public function setUserAgent($userAgent) {
+        $this->sender->setUserAgent($userAgent);
     }
 
     /**
