@@ -55,7 +55,7 @@ class Sender
         curl_setopt($curlHandler, CURLOPT_URL, $url);
         curl_setopt($curlHandler, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curlHandler, CURLOPT_TIMEOUT, 5);
-        curl_setopt($curlHandler, CURLOPT_USERAGENT, self::FAKE_USER_AGENT);
+        curl_setopt($curlHandler, CURLOPT_USERAGENT, $this->userAgent);
         curl_setopt($curlHandler, CURLOPT_HEADER, true);
         curl_setopt($curlHandler, CURLOPT_POSTFIELDS, $payload);
         curl_exec($curlHandler);
@@ -75,7 +75,7 @@ class Sender
         curl_setopt($curlHandler, CURLOPT_URL, $url);
         curl_setopt($curlHandler, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curlHandler, CURLOPT_TIMEOUT, 5);
-        curl_setopt($curlHandler, CURLOPT_USERAGENT, self::FAKE_USER_AGENT);
+        curl_setopt($curlHandler, CURLOPT_USERAGENT, $this->userAgent);
         curl_setopt($curlHandler, CURLOPT_HEADER, true);
         curl_exec($curlHandler);
         $status = curl_getinfo($curlHandler, CURLINFO_HTTP_CODE);
